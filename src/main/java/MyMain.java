@@ -27,33 +27,37 @@ public class MyMain {
 
     // Checks to see whether or not str contains 'The' or 'the'
     public static boolean containsThe(String str) {
-        String the_lower = "the";
-        String the_upper = "The";
-        int x = str.indexOf(the_lower);
-        int y = str.indexOf(the_upper);
-        if (x >= 0 || y >= 0){
+        int x = str.indexOf("the");
+        int y = str.indexOf("The");
+        if (x != -1 || y != -1){
             System.out.println("Your string does contain the or The");
+            return true;
+
         }
         else{
+
             System.out.println("Your string does NOT contain the or The");
+            return false;
         }
-        return false;
     }
 
     // Checks whether str is a palindrome or not
     public static boolean isPalindrome(String str) {
         String pali_string = "";
         for (int i = str.length()-1; i >= 0;i--) {
-            char y = str.charAt(i);
+
             pali_string = pali_string + str.charAt(i);
         }
         if (str.equals(pali_string)){
             System.out.println("Your string is a palindrome");
+            return true;
         }
-        if(str.equals(pali_string) == false){
+        else{
             System.out.println("Your string is NOT a palindrome");
+            return false;
         }
-        return false;
+
+
     }
     
     public static void main(String[] args) {
