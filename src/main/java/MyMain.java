@@ -21,6 +21,7 @@ public class MyMain {
         }
         System.out.println("Your string has " + count + "a's, b's, and c's");
 
+
         return count;
     }
 
